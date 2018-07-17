@@ -97,7 +97,7 @@ class SignUp extends React.Component {
         </div>
 
         <form onSubmit={this.onSubmit} className="form form-signup">
-          <h3>Créez un compte</h3>
+          <h3 className="formheadstyle">Créez un compte</h3>
           <div className="inputitem">
             <label htmlFor="email">Email</label>
             <input
@@ -106,6 +106,7 @@ class SignUp extends React.Component {
               type="text"
               value={this.state.email}
               onChange={this.handleChange}
+              className="hello"
             />
           </div>
           <div className="inputitem">

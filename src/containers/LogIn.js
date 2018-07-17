@@ -40,26 +40,52 @@ class LogIn extends React.Component {
     event.preventDefault();
   };
 
+  onClick = event => {
+    this.props.history.push("/sign_up");
+  };
+
   render() {
     return (
-      <form onSubmit={this.onSubmit} className="form form-login">
-        <label htmlFor="email">Adresse email</label>
-        <input
-          id="email"
-          name="email"
-          type="text"
-          value={this.state.email}
-          onChange={this.handleChange}
-        />
-        <label htmlFor="password">Password</label>
-        <input
-          id="password"
-          name="password"
-          type="password"
-          value={this.state.password}
-          onChange={this.handleChange}
-        />
-        <button type="submit">Se connecter</button>
+      <form
+        className="container block2 form form-signup"
+        onSubmit={this.onSubmit}
+      >
+        <h3 className="formheadstyle">Connexion</h3>
+
+        <div className="inputitem">
+          <label htmlFor="email">Adresse email</label>
+          <input
+            id="email"
+            name="email"
+            type="text"
+            value={this.state.email}
+            onChange={this.handleChange}
+          />
+        </div>
+
+        <div className="inputitem">
+          <label htmlFor="password">Password</label>
+          <input
+            id="password"
+            name="password"
+            type="password"
+            value={this.state.password}
+            onChange={this.handleChange}
+          />
+        </div>
+        <button type="submit" className="signupbutton">
+          Se connecter
+        </button>
+
+        {/* <div>
+          <hr />
+        </div> */}
+        <div className="noaccount">
+          <p>Vous n'avez pas de compte?</p>
+        </div>
+        <button type="submit" className="createaccount" onClick={this.onClick}>
+          creer un compte
+        </button>
       </form>
     );
   }
