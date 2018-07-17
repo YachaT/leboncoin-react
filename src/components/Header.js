@@ -41,11 +41,11 @@ class Header extends React.Component {
     return (
       <header className="headerstyle">
         <div className="container headerelements">
-          <img src="./images/logolbc.svg" />
+          <NavLink to="/">
+            <img src="./images/logolbc.svg" />
+          </NavLink>
           <ul className="nav-list">
-            <li>
-              <NavLink to="/">Home</NavLink>
-            </li>
+            <li />
             {this.renderNav()}
           </ul>
         </div>
