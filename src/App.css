@@ -1,3 +1,6 @@
+body {
+  background-color: whitesmoke;
+}
 .form {
   display: flex;
   flex-direction: column;
@@ -5,7 +8,32 @@
 
 .form-signup {
   width: 400px;
-  padding: 20px;
+  /* border: 2px solid blue; */
+}
+
+input {
+  background-color: whitesmoke;
+}
+
+.divimage i {
+  font-size: 50px;
+  color: rgb(75, 132, 209);
+}
+
+.inputitem {
+  display: flex;
+  flex-direction: column;
+}
+
+form label {
+  margin-bottom: 7px;
+  font-weight: bold;
+}
+
+form h3 {
+  border-bottom: 2px solid rgb(230, 114, 61);
+  text-align: center;
+  padding-bottom: 5px;
 }
 
 .form-login {
@@ -21,11 +49,128 @@ textarea {
 .nav-list {
   list-style: none;
   display: flex;
-  flex-direction: row;
+  align-items: center;
   margin: 0;
   padding: 0;
+  height: 100%;
 }
 
 .nav-list > li {
-  padding-right: 10px;
+  /* padding-right: 10px; */
+  display: flex;
+  justify-content: center;
+}
+
+.container {
+  width: 1124px;
+  margin: 0 auto;
+}
+
+.container.block {
+  background-color: white;
+  justify-content: center;
+  padding: 60px 150px;
+  box-sizing: border-box;
+  margin-top: 50px;
+  box-shadow: 2px 2px 10px rgb(199, 199, 199);
+}
+
+.signupbutton {
+  background-color: rgb(75, 132, 209);
+  color: white;
+  border: 2px;
+  height: 40px;
+  border-radius: 2px;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+input {
+  height: 40px;
+  border: 2px;
+}
+
+.divimage {
+  width: 100px;
+  /* border: 2px solid blue; */
+}
+
+.infoaccount {
+  width: 480px;
+
+  /* border: 2px solid red; */
+}
+
+.infoitem {
+  width: 400px;
+  display: flex;
+  /* border: 2px solid blue; */
+}
+
+.infotext {
+  /* border: 2px solid green; */
+  flex: 1;
+}
+
+.infoaccount img {
+  height: 40px;
+  color: lightblue;
+}
+
+.infoitem {
+  display: flex;
+  align-items: center;
+}
+
+.container {
+  display: flex;
+}
+
+.infoaccount img {
+  margin-right: 30px;
+}
+
+.headerstyle {
+  display: flex;
+  /* align-items: center; */
+  height: 60px;
+  background-color: rgb(230, 114, 61);
+}
+
+.headerelements {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.headerbutton {
+  color: white;
+  font-weight: bold;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  /* background-color: whitesmoke; */
+  /* border-left: 2px solid white; */
+  /* padding-top: 60px;
+  padding-bottom: 60px; */
+}
+
+.borderstyling1 {
+  border-left: 2px solid white;
+  height: 100%;
+}
+
+.borderstyling2 {
+  border-right: 2px solid white;
+  border-left: 2px solid white;
+
+  height: 100%;
+}
+
+a:link {
+  text-decoration: none;
+}
+
+.headerstyle img {
+  height: 40px;
 }
