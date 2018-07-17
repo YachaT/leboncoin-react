@@ -39,7 +39,7 @@ class App extends Component {
   };
 
   render() {
-    const { user } = this.state;
+    const user = this.state.user;
     return (
       <Router>
         <React.Fragment>
@@ -57,7 +57,9 @@ class App extends Component {
           />
           <Route
             path="/log_in"
-            render={props => <LogIn {...props} user={user} />}
+            render={props => (
+              <LogIn {...props} user={user} setUser={this.setUser} />
+            )}
           />
           <Route
             path="/profile/:id"

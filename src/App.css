@@ -8,6 +8,11 @@
   padding: 20px;
 }
 
+.form-login {
+  width: 400px;
+  margin: 0 auto;
+}
+
 .form-signup input,
 textarea {
   margin-bottom: 30px;
