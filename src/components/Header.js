@@ -11,43 +11,61 @@ class Header extends React.Component {
     if (this.props.user._id) {
       return (
         <React.Fragment>
-          <li>
+          {/* <li> */}
+          <div className="headertabsleft">
+            <NavLink to="/publish">
+              <button className="headertab">DEPOSER UNE ANNONCE</button>
+            </NavLink>
+            <NavLink to="/">
+              <button className="headertab">OFFRES</button>
+            </NavLink>
+          </div>
+          <div className="headertabsright">
             <NavLink to={"/profile/" + this.props.user._id}>
               {this.props.user.username}
             </NavLink>
-          </li>
-          <li>
-            <button onClick={this.onLogOut}>Déconnexion</button>
-          </li>
+            {/* </li> */}
+            {/* <li> */}
+            <button className="signoutbutton" onClick={this.onLogOut}>
+              Déconnexion
+            </button>
+          </div>
+          {/* </li> */}
         </React.Fragment>
       );
     }
     return (
       <React.Fragment>
-        <li className="borderstyling1">
-          <NavLink to="/sign_up" className="headerbutton">
-            Créer un compte
-          </NavLink>
-        </li>
-        <li className="borderstyling2">
-          <NavLink to="/log_in" className="headerbutton">
-            Se connecter
-          </NavLink>
-        </li>
+        {/* <li className="borderstyling1"> */}
+        <NavLink to="/sign_up" className="headerbutton borderstyling1">
+          Créer un compte
+        </NavLink>
+        {/* </li> */}
+        {/* <li className="borderstyling2"> */}
+        <NavLink to="/log_in" className="headerbutton borderstyling2">
+          Se connecter
+        </NavLink>
+        {/* </li> */}
       </React.Fragment>
     );
   }
   render() {
+    let className;
+    if (this.props.user._id) {
+      className = "nav-list-connected";
+    } else {
+      className = "nav-list-disconnected";
+    }
     return (
       <header className="headerstyle">
         <div className="container headerelements">
           <NavLink to="/">
-            <img src="./images/logolbc.svg" />
+            <img src="/images/logolbc.svg" />
           </NavLink>
-          <ul className="nav-list">
-            <li />
+          <div className={"nav-list " + className}>
+            {/* <li /> */}
             {this.renderNav()}
-          </ul>
+          </div>
         </div>
       </header>
     );

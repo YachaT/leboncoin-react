@@ -40,7 +40,7 @@ class LogIn extends React.Component {
     event.preventDefault();
   };
 
-  onClick = event => {
+  onClick = () => {
     this.props.history.push("/sign_up");
   };
 

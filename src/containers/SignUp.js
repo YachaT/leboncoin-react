@@ -110,7 +110,7 @@ class SignUp extends React.Component {
             />
           </div>
           <div className="inputitem">
-            <label htmlFor="password">password</label>
+            <label htmlFor="password">Password</label>
             <input
               id="password"
               name="password"
@@ -121,7 +121,7 @@ class SignUp extends React.Component {
           </div>
 
           <div className="inputitem">
-            <label htmlFor="username">username</label>
+            <label htmlFor="username">Username</label>
             <input
               id="username"
               name="username"
